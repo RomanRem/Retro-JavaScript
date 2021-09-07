@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CodePlayer</title>
+
+        <script type="text/javascript" src="jQuery.min.js"></script>
+        
+        <link type="text/css" rel="stylesheet"  href="style.css">
+        
+    </head>
+    <div id="header">                                                             <!-- верхняя часть страницы -->
+        <div id="logo"> 
+            CodePlayer
+        </div>
+        <div id="buttonContainer">
+            <div class="toggleButton active" id="html">HTML</div>
+            <div class="toggleButton" id="css">CSS</div>
+            <div class="toggleButton" id="javascript">Javascript</div>
+            <div class="toggleButton active" id="output">Output</div>
+
+        </div>
+
+    </div>
+
+    <div id="bodyContainer">                                                      <!-- основная часть страницы -->
+        
+        <textarea id="htmlPanel" class="panel"><p>HelloWorld</p></textarea>
+        <textarea id="cssPanel" class="panel hidden">p {color: green;}</textarea>
+        <textarea id="javascriptPanel" class="panel hidden">document.getElementById("paragraph").innerHTML = "Hello Roman!";</textarea>
+        <iframe id="outputPanel" class="panel"></iframe>
+        
+        
+    </div>
+    <body>
+
+        <script type="text/javascript" src="javas.js"></script>
+
+    </body>
+
+</html>
