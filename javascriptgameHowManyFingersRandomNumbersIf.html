@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Javascript</title>
+		
+			
+			
+	</head>
+			
+	<body>
+			<p>Сколько пальцев Я загадал?</p>
+			<p><input type="text" id="howMany"> <button id="Check">Введи сколько</button></p>
+		<script type="text/javascript">
+			document.getElementById("Check"). onclick = function(){
+				
+				var randomNumber  = Math.floor((Math.random() * 6));
+;
+					if (document.getElementById("howMany"). value == randomNumber){
+				alert("Угадал: ");
+			
+		
+			  } else {
+			
+				alert("Неувязочка, не угадал - верное : "+ randomNumber);
+				}
+			}
+				
+		</script>
+			
+    </body>
+
+</html>
