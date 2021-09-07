@@ -1,0 +1,20 @@
+		body {
+		
+			font-family: sans-serif;
+		}	
+		
+		#randomSquare {
+		
+			width:100px;
+			height:100px;
+			background-color:#d2fcd9;
+			display: none;
+			position: relative;
+			
+		}
+		
+		.bold {
+		
+			font-weight: bold;
+		
+		}
