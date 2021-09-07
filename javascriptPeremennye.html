@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Javascript</title>
+		
+			
+			
+	</head>
+			
+	<body>
+			<input type="text" id="textInput">
+			<button id="textChanger">Отправить!</button>
+			<p id="replaceText">Введите любой текст</p>
+		<script type="text/javascript">
+			
+				document.getElementById("textChanger"). onclick = function(){
+				
+					var textEntered  = "";
+					textEntered = document.getElementById("textInput"). value;
+					document.getElementById("replaceText"). innerHTML = textEntered;
+				}
+		</script>
+    </body>
+
+</html>
