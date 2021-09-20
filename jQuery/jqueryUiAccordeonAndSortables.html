@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery</title>
+			
+			<script type="text/javascript" src="jquery.min.js"></script>
+       	
+			<script src="jquery-ui/jquery-ui.js"></script>
+		
+			<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+			
+        <style type="text/css">
+            
+            #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+            #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <div id="accordion">
+			<div class="group">
+			<h3>Title 1</h3>
+			<div>
+			
+				<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.				
+				</p>
+			</div>
+				</div>
+			<div class="group">
+			<h3>Title 2</h3>
+			<div>
+			
+				<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.				
+				</p>
+			</div>
+				</div>
+			<div class="group">
+			<h3>Title 3</h3>
+			<div>
+			
+				<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.				
+				</p>
+			</div>
+				</div>
+			<div class="group">
+			<h3>Title 4</h3>
+			<div>
+			
+				<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.				
+				</p>
+			</div>
+			</div>
+		</div>
+    <script type="text/javascript">
+            
+          
+    	   $( function() {
+    $( "#accordion" )
+      .accordion({
+        header: "> div > h3"
+      })
+      .sortable({
+        axis: "y",
+        handle: "h3",
+        stop: function( event, ui ) {
+          // IE doesn't register the blur when sorting
+          // so trigger focusout handlers to remove .ui-state-focus
+          ui.item.children( "h3" ).triggerHandler( "focusout" );
+ 
+          // Refresh accordion to handle new order
+          $( this ).accordion( "refresh" );
+        }
+      });
+  } );
+			
+		</script>
+    </body>
+
+</html>
